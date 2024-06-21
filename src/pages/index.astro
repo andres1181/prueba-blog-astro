@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import Greeting from '../components/preact/Greeting';
 
 import BaseLayout from '../layouts/BaseLayout.astro';
 
@@ -7,6 +8,7 @@ const pageTitle = "Inicio"
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-
+    <Greeting messages={["Hola", "Qué tal", "Hola a todos"]} />
+    <Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
 </BaseLayout>
 </html>
