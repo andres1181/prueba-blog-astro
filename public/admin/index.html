@@ -11,16 +11,51 @@
  <body>
    <script src="https://unpkg.com/decap-cms@^3.1.2/dist/decap-cms.js"></script>
    <script>
-    
     if (window.netlifyIdentity) {
+      // Evento que se ejecuta cuando Netlify Identity se inicializa
       window.netlifyIdentity.on("init", (user) => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-        document.location.href = "/admin/";
-        });
-      }
+        // **Verificación en la inicialización:**
+        // Si no hay un usuario autenticado al cargar la página
+        if (!user) {
+          // Escucha el evento de inicio de sesión
+          window.netlifyIdentity.on("login", () => {
+            // Redirige al usuario al panel de administración si inicia sesión
+            document.location.href = "/admin/";
+          });
+        } else {
+          // Si ya hay un usuario autenticado, verifica si está autorizado
+          verifyUser(user);
+        }
       });
+  
+      // **Verificación al iniciar sesión:**
+      // Este evento se ejecuta cada vez que un usuario inicia sesión
+      window.netlifyIdentity.on("login", (user) => {
+        // Llama a la función de verificación para determinar si el usuario tiene acceso
+        verifyUser(user);
+      });
+  
+      // **Restricción para usuarios no autenticados:**
+      // Evento que se ejecuta cuando un usuario cierra sesión
+      window.netlifyIdentity.on("logout", () => {
+        // Redirige al usuario a la página de inicio después de cerrar sesión
+        document.location.href = "/";
+      });
+  
+      // Función para verificar el estado del usuario autenticado
+      function verifyUser(user) {
+        // Verifica si el correo electrónico del usuario está confirmado
+        if (user.email_verified) {
+          // Si está confirmado, permite el acceso al panel de administración
+          document.location.href = "/admin/";
+        } else {
+          // Si no está confirmado, muestra una alerta y cierra la sesión automáticamente
+          alert("Tu acceso no está confirmado. Por favor, verifica tu invitación.");
+          window.netlifyIdentity.logout();
+        }
+      }
     }
-    </script>
+  </script>
+  
  </body>
 </html>
