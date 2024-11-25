@@ -10,9 +10,17 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/preact": "^3.5.0",
-    "@astrojs/rss": "^4.0.6",
-    "astro": "^4.10.2",
-    "preact": "^10.22.0"
+    "@astrojs/preact": "^3.5.4",
+    "@astrojs/rss": "^4.0.9",
+    "astro": "^4.16.14",
+    "decap-cms-app": "3.4.0",
+    "preact": "^10.25.0"
+  },
+  "eslintConfig": {
+    "extends": "standard"
+  },
+  "packageManager": "pnpm@9.14.2",
+  "devDependencies": {
+    "standard": "^17.1.2"
   }
 }
