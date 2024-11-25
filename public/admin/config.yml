@@ -1,8 +1,6 @@
 backend:
   name: git-gateway
-  repo: 
   branch: main
-local_backend: true
 media_folder: src/assets/img
 public_folder: src/assets/img
 
