@@ -29,4 +29,4 @@ tags:
 
 ¿Tienes algún consejo adicional que te funcione? ¡Déjamelo en los comentarios! 😊
 
-![](src/assets/img/car-modern.png)
+
