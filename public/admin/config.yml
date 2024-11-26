@@ -12,7 +12,7 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "../../layouts/MarkdownPostLayout.astro" }
-      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Title", name: "title", widget: "string", required: true }
       - { label: "Publish Date", name: "pubDate", widget: "datetime", format: "DD/MM/YYYY", default: "{{now}}"}
       - { label: "Author", name: "author", widget: "string" }
       - { label: "Image", name: "image", widget: "object", fields: [
@@ -21,5 +21,5 @@ collections:
         ] }
       - { label: "Description", name: "description", widget: "text" }
       - { label: "Tags", name: "tags",  widget: "list",  allow_add: false,  default: ["Post"]}
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Body", name: "body", widget: "markdown", required: true }
       
