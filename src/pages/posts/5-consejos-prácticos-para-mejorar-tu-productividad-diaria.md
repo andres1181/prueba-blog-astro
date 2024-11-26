@@ -4,7 +4,7 @@ title: 5 consejos prácticos para mejorar tu productividad diaria
 pubDate: 2024-11-30T19:10:00.000Z
 author: Felipito el pipe
 image: 
-  url: src/assets/img/top-view-sneakers-compass-table.jpg
+  url: /media/top-view-sneakers-compass-table.jpg
   alt: 'Una imagen'
 description: Este es una imagen para el post de prueba para el blog
 tags:
