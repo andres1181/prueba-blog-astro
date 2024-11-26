@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: Ambar
-pubDate: 26/11/2024
+pubDate: 2024-11-30T19:10:00.000Z
 author: Felipito
 image:
   url: /media/imagen1.jpg
