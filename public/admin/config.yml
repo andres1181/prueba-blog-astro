@@ -9,13 +9,17 @@ collections:
     label: "Post"
     folder: "src/pages/posts"
     create: true
+    slug: "{{slug}}"
     fields:
-      - { label: "Layout", name: "layout", widget: "hidden", default: "../../src/layouts/MarkdownPostLayout.astro" }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "../../layouts/MarkdownPostLayout.astro" }
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "pubDate", widget: "datetime", default: "{{now}}"}
+      - { label: "Publish Date", name: "pubDate", widget: "datetime"}
       - { label: "Author", name: "author", widget: "string" }
-      - { label: "Image", name: "image", widget: "image" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Tags", name: "tags",  widget: "list",  allow_add: false,  default: ["news"]}
+      - { label: "Image", name: "image", widget: "object", fields: [
+            { label: "URL", name: "url", widget: "string" },
+            { label: "Texto alternativo", name: "alt", widget: "string" }
+        ] }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Tags", name: "tags",  widget: "list",  allow_add: false,  default: ["Post"]}
       - { label: "Body", name: "body", widget: "markdown" }
       

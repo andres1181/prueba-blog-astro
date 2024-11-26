@@ -1,9 +1,11 @@
 ---
-layout: ../../src/layouts/MarkdownPostLayout.astro
+layout: ../../layouts/MarkdownPostLayout.astro
 title: 5 consejos prácticos para mejorar tu productividad diaria
 pubDate: 2024-11-30T19:10:00.000Z
 author: Felipito el pipe
-image: src/assets/img/top-view-sneakers-compass-table.jpg
+image: 
+  url: src/assets/img/top-view-sneakers-compass-table.jpg
+  alt: 'Una imagen'
 description: Este es una imagen para el post de prueba para el blog
 tags:
   - news
