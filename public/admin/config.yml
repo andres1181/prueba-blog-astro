@@ -13,7 +13,7 @@ collections:
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "../../layouts/MarkdownPostLayout.astro" }
       - { label: "Title", name: "title", widget: "string", required: true }
-      - { label: "Publish Date", name: "pubDate", widget: "datetime", default: "{{now}}"}
+      - { label: "Publish Date", name: "pubDate", widget: "datetime"}
       - { label: "Author", name: "author", widget: "string" }
       - { label: "Image", name: "image", widget: "object", fields: [
             { label: "URL", name: "url", widget: "image" },
